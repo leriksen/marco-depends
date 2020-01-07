@@ -1,0 +1,22 @@
+## Pipeline B, this one is triggered by Pipeline A
+
+resources:
+  pipelines:
+    - pipeline: PipelineA # Just a name to identify this resource in the pipeline
+      source: Test-Pipeline-A # the pipeline definition name that triggers this pipeline 
+      trigger: true # Trigger this pipeline
+
+trigger: none
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+
+  displayName: 'Run a multi-line script'
