@@ -3,7 +3,7 @@
 resources:
   pipelines:
     - pipeline: PipelineA # Just a name to identify this resource in the pipeline
-      source: Test-Pipeline-A # the pipeline definition name that triggers this pipeline 
+      source: leriksen.marco-source# the pipeline definition name that triggers this pipeline 
       trigger: true # Trigger this pipeline
 
 trigger: none
