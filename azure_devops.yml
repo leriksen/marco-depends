@@ -1,10 +1,8 @@
-## Pipeline B, this one is triggered by Pipeline A
-
 resources:
   pipelines:
-    - pipeline: PipelineA # Just a name to identify this resource in the pipeline
-      source: leriksen.marco-source# the pipeline definition name that triggers this pipeline 
-      trigger: true # Trigger this pipeline
+    - pipeline: PipelineA
+      source: leriksen.marco-source
+      trigger: true
 
 trigger: none
 
@@ -14,9 +12,3 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-
-  displayName: 'Run a multi-line script'
